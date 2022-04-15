@@ -2142,7 +2142,8 @@ void main() {
     });
 
     test('pendingNotificationRequests', () async {
-      await flutterLocalNotificationsPlugin.pendingNotificationRequests();
+      final stuffs = await flutterLocalNotificationsPlugin.pendingNotificationRequests();
+      print('QQQQ here $stuffs');
       expect(log, <Matcher>[
         isMethodCall('pendingNotificationRequests', arguments: null)
       ]);

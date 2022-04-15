@@ -17,7 +17,12 @@ enum RepeatInterval {
 class PendingNotificationRequest {
   /// Constructs an instance of [PendingNotificationRequest].
   const PendingNotificationRequest(
-      this.id, this.title, this.body, this.payload);
+    this.id,
+    this.title,
+    this.body,
+    this.payload,
+    this.date,
+  );
 
   /// The notification's id.
   final int id;
@@ -30,4 +35,7 @@ class PendingNotificationRequest {
 
   /// The notification's payload.
   final String? payload;
+
+  /// The notification's date.
+  final DateTime date;
 }

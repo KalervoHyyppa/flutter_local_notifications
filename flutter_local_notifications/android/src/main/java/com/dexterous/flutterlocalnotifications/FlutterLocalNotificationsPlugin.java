@@ -1296,6 +1296,7 @@ public class FlutterLocalNotificationsPlugin
       pendingNotification.put("title", scheduledNotification.title);
       pendingNotification.put("body", scheduledNotification.body);
       pendingNotification.put("payload", scheduledNotification.payload);
+      pendingNotification.put("date", scheduledNotification.scheduledDateTime);
       pendingNotifications.add(pendingNotification);
     }
     result.success(pendingNotifications);

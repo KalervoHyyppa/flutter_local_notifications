@@ -185,6 +185,8 @@ static FlutterError *getFlutterError(NSError *error) {
           [[NSMutableDictionary alloc] init];
       pendingNotificationRequest[ID] =
           request.content.userInfo[NOTIFICATION_ID];
+      pendingNotificationRequest[DATE] =
+          request.content.userInfo[SCHEDULED_DATE_TIME];
       if (request.content.title != nil) {
         pendingNotificationRequest[TITLE] = request.content.title;
       }
@@ -212,6 +214,8 @@ static FlutterError *getFlutterError(NSError *error) {
         [[NSMutableDictionary alloc] init];
     pendingNotificationRequest[ID] =
         localNotification.userInfo[NOTIFICATION_ID];
+    pendingNotificationRequest[DATE] =
+        localNotification.userInfo[SCHEDULED_DATE_TIME];
     if (localNotification.userInfo[TITLE] != [NSNull null]) {
       pendingNotificationRequest[TITLE] = localNotification.userInfo[TITLE];
     }
